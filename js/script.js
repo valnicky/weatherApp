@@ -1,8 +1,8 @@
 /**
  * Weather App
- * TODO: Complete getWeatherData() to return json response Promise
- * TODO: Complete searchCity() to get user input and get data using getWeatherData()
- * TODO: Complete showWeatherData() to set the data in the the html file from response
+ *Complete getWeatherData() to return json response Promise
+ *Complete searchCity() to get user input and get data using getWeatherData()
+ *Complete showWeatherData() to set the data in the the html file from response
  */
 
 // API_KEY for maps api
@@ -22,7 +22,7 @@ const FULL_URL = `${URL}?q=${city}&appid=${API_KEY}&units=imperial`;
 
 const weatherPromise =   fetch(
     FULL_URL);
-weatherPromise.then((response) => {
+return weatherPromise.then((response) => {
            return  response.json();
     })
     .catch((err) => {
@@ -31,14 +31,13 @@ weatherPromise.then((response) => {
 };
 
 
-getWeatherData("Detroit");
 /**
  * Retrieve city input and get the weather data
  * HINT: Use the promise returned from getWeatherData()
  */
 searchCity = () => {
   const city = document.getElementById("city-input").value;
-  // CODE GOES HERE
+  getWeatherData(city).then((response) => console.log(response)).catch(err => console.log(err))
 };
 
 /**
