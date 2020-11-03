@@ -45,10 +45,10 @@ searchCity = () => {
  */
 showWeatherData = (weatherData) => {
   
-  document.getElementById('city-name').innerHTML = weatherData.name;
-    document.getElementById('weather-type').innerText = weatherData.weather[0].main;
+  document.getElementById('city-name').innerText = weatherData.name;
+  document.getElementById('weather-type').innerText = weatherData.weather[0].main;
   
-   document.getElementById('temp').innerHTML =weatherData.main.temp;
-    document.getElementById('min-temp').innerHTML= weatherData.main.temp_min;
-    document.getElementById('max-temp').innerHTML = weatherData.main.temp_max;
+   document.getElementById('temp').innerText =weatherData.main.temp;
+   document.getElementById('min-temp').innerText= weatherData.main.temp_min;
+   document.getElementById('max-temp').innerText = weatherData.main.temp_max;
 };
